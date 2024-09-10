@@ -20,7 +20,7 @@ class ProductBloc extends Bloc<ProductLoadedEvent, ProductState>
       }
       catch(e)
       {
-       // emit();
+       emit(ProductErrorState(errorMessage: e.toString()));
       }
       // TODO: implement event handler
     });
